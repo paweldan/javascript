@@ -11,27 +11,42 @@ function buttonClicked(argButtonName) {
   /**
    * Describe this function...
    */
-  function getMoveName(argMoveId) {
+   function getMoveName(argMoveId) {
     console.log('wywołano funkcję getMoveName z argumentem: ' + argMoveId);
     if (argMoveId == 1) {
       return 'kamień';
-    } else {
+    } else if (argMoveId == 2) {
+      return 'papier'
+      }
+        else if (argMoveId == 3) {
+          return 'nożyce'
+      }
+    else {
       printMessage('Nie znam ruchu o id ' + argMoveId + '. Zakładam, że chodziło o "kamień".');
       return 'kamień';
     }
-    if (argMoveId == 2) {
-      return 'papier';
-    } else {
-      printMessage('Nie znam ruchu o id ' + argMoveId + '. Zakładam, że chodziło o "kamień".');
-      return 'kamień';
-    }
-    if (argMoveId == 3) {
-      return 'nożyce';
-    } else {
-      printMessage('Nie znam ruchu o id ' + argMoveId + '. Zakładam, że chodziło o "kamień".');
-      return 'kamień';
-    }
-  }
+
+  // function getMoveName(argMoveId) {
+  //   console.log('wywołano funkcję getMoveName z argumentem: ' + argMoveId);
+  //   if (argMoveId == 1) {
+  //     return 'kamień';
+  //   } else {
+  //     printMessage('Nie znam ruchu o id ' + argMoveId + '. Zakładam, że chodziło o "kamień".');
+  //     return 'kamień';
+  //   }
+  //   if (argMoveId == 2) {
+  //     return 'papier';
+  //   } else {
+  //     printMessage('Nie znam ruchu o id ' + argMoveId + '. Zakładam, że chodziło o "kamień".');
+  //     return 'kamień';
+  //   }
+  //   if (argMoveId == 3) {
+  //     return 'nożyce';
+  //   } else {
+  //     printMessage('Nie znam ruchu o id ' + argMoveId + '. Zakładam, że chodziło o "kamień".');
+  //     return 'kamień';
+  //   }
+  // }
 
   /**
    * Describe this function...
@@ -54,26 +69,6 @@ function buttonClicked(argButtonName) {
       printMessage('Przegrywasz :(');
     }
 
-    // if (argPlayerMove == 'papier' && argComputerMove == 'kamień') {
-    //   printMessage('Wygrywasz!');
-    // } else {
-    //   printMessage('Przegrywasz :(');
-    // }
-    // if (argPlayerMove == 'kamień' && argComputerMove == 'nożyce') {
-    //   printMessage('Wygrywasz!');
-    // } else {
-    //   printMessage('Przegrywasz :(');
-    // }
-    // if (argPlayerMove == 'nożyce' && argComputerMove == 'papier') {
-    //   printMessage('Wygrywasz!');
-    // } else {
-    //   printMessage('Przegrywasz :(');
-    // }
-    // if (argPlayerMove == argComputerMove) {
-    //   printMessage('Remis!');
-    // } else {
-    //   printMessage('Przegrywasz :(');
-    // }
     printMessage('Zagrałem ' + argComputerMove + ', a Ty ' + argPlayerMove);
   }
   playerMove = argButtonName;
